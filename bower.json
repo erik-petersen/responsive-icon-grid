@@ -1,0 +1,23 @@
+{
+  "name": "responsive-icon-grid",
+  "homepage": "https://github.com/erik-petersen/responsive-icon-grid",
+  "authors": [
+    "Erik Petersen <contacterikpetersen@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "font-awesome": "^4.6.3",
+    "susy": "^2.2.12",
+    "meyer-reset": "*"
+  }
+}
