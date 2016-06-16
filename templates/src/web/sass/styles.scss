@@ -1,0 +1,92 @@
+@import "../../../../bower_components/meyer-reset/stylesheets/_meyer-reset.scss";
+@import "../../../../bower_components/susy/sass/susy/";
+@import "../../../../bower_components/font-awesome/css/font-awesome.css";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+$h3Font: "Lato", sans-serif;
+$h3Size: 2em;
+$colorBlue: #47a3da;
+$boxBorder: .01px solid #d3d3d3;
+
+/*
+Changing Susy default global settings
+With help from https://css-tricks.com/build-web-layouts-easily-susy/
+*/
+
+$susy: (
+  // Tells Susy to use 12 columns
+  columns: 12,
+  container: 1280px,
+  global-box-sizing: border-box
+  );
+
+/* Makes border-box properties */
+@include border-box-sizing;
+
+// container to wrap entire document
+.wrap {
+  @include container;
+  padding: gutter();
+
+.second-box {
+    /* Telling Susy that there are 12 items, and each takes up 4 rows */
+    @include span(4 of 12); // possibly not needed
+    @include gallery(4 of 12);
+    height: 23em;
+  } // end .content-box
+} // end .wrap
+
+// applying styling to each box and its contents
+.second-box {
+  // display: none;
+  color: $colorBlue;
+  font-family: $h3Font;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  a {
+    color: $colorBlue;
+    text-decoration: none;
+  }
+
+  .fa {
+    font-size: 6em;
+    margin-top: .75em;
+  }
+
+  .line {
+    position: relative;
+    top: -2.25em;
+    display: inline-block;
+    content: " ";
+    width: 185px;
+    height: 5px;
+    background-color: $colorBlue;
+    margin-bottom: .25em;
+  }
+
+  h3 {
+    margin-top: 2.25em;
+    margin-bottom: .5em;
+    font-family: $h3Font;
+    font-weight: 700;
+    font-size: $h3Size;
+  }
+
+  .hover-heading {
+    display: none;
+  }
+} // end content-box
+
+.second-box {
+  cursor: pointer;
+}
+
+// .borderRight {
+//   border-right: $boxBorder;
+// }
+//
+// .borderBottom {
+//   border-bottom: $boxBorder;
+// }
